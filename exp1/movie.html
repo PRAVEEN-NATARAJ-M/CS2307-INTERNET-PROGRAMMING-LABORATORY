@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Movie Ticket Booking</title>
+</head>
+<body>
+  <h2>Movie Reservation</h2>
+  
+  <h3>Now Showing</h3>
+  <table border="1">
+    <tr>
+      <th>Movie</th>
+      <th>Time</th>
+      <th>Available Seats</th>
+    </tr>
+    <tr>
+      <td>Avengers</td>
+      <td>7:00 PM</td>
+      <td>50</td>
+    </tr>
+    <tr>
+      <td>Inception</td>
+      <td>9:00 PM</td>
+      <td>35</td>
+    </tr>
+  </table>
+
+  <h3>Highlights</h3>
+  <ol>
+    <li>3D and Dolby Atmos</li>
+    <li>Free Popcorn</li>
+  </ol>
+
+  <form>
+    <label>Movie Name:</label><br>
+    <select name="" id="">
+      <option value="">Avengers</option>
+      <option value="">Inception</option>
+    </select><br><br>
+    <!--<input type="radio" name="" id="" >Avengers<br>
+    <input type="text" required><br><br>-->
+    <label>Number of Tickets:</label><br>
+    <input type="number" min="1" max="10"><br><br>
+    <label>Select Time:</label><br>
+    <input type="time"><br><br>
+    <input type="submit" value="Book Now">
+  </form>
+</body>
+</html>

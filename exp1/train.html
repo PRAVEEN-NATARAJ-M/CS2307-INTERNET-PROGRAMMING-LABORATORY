@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Train Ticket Booking</title>
+</head>
+<body>
+  <h2>Train Reservation</h2>
+  
+  <table border="1">
+    <tr>
+      <th>Train</th>
+      <th>Time</th>
+      <th>Available Seats</th>
+    </tr>
+    <tr>
+      <td>Chennai Express</td>
+      <td>10:00 AM</td>
+      <td>100</td>
+    </tr>
+    <tr>
+      <td>Shatabdi</td>
+      <td>5:00 PM</td>
+      <td>60</td>
+    </tr>
+  </table>
+
+  <ul>
+    <li>AC/Non-AC Sleeper</li>
+    <li>Wi-Fi Available</li>
+  </ul>
+
+  <form>
+    <label>Train Name:</label><br>
+    <input type="text"><br><br>
+    <label>Travel Date:</label><br>
+    <input type="date"><br><br>
+    <label>Tickets:</label><br>
+    <input type="number" min="1" max="6"><br><br>
+    <input type="submit" value="Book Train">
+  </form>
+</body>
+</html>
