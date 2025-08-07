@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Electronics Items</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <h2>Electronics Items</h2>
+
+    <!-- Audio -->
+    <audio controls>
+        <source src="audios/electronics_items.mp3" type="audio/mpeg">
+        Your browser does not support audio.
+    </audio>
+
+    <br><br>
+<div class="product-images">
+    <!-- Product Images (Draggable) -->
+    <img src="images/laptop.jpg" alt="Laptop" width="100" height="100" draggable="true" ondragstart="drag(event)" id="item1">Laptop
+    <img src="images/mobile.jpg" alt="Mobile" width="100" height="100" draggable="true" ondragstart="drag(event)" id="item2">Mobile
+</div>
+    <br><br>
+
+    <!-- Product Video -->
+    <video width="320" height="240" controls>
+        <source src="videos/laptop.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <br><br>
+
+    <!-- Cart -->
+    <h3>Cart</h3>
+    <div id="cart" ondrop="drop(event)" ondragover="allowDrop(event)" style="width:90%; height:150px; border:1px solid black;"></div>
+
+    <br>
+
+    <!-- Geolocation -->
+    <h4>Your Location:</h4>
+    <button onclick="getLocation()">Get Location</button>
+    <p id="location"></p>
+
+    <br>
+
+    <!-- Purchase Button -->
+    <button id="proceedbutton" onclick="proceedToPurchase()">Proceed to Purchase</button>
+
+    <script>
+        function allowDrop(ev) {
+            ev.preventDefault();
+        }
+
+        function drag(ev) {
+            ev.dataTransfer.setData("text", ev.target.id);
+        }
+
+        function drop(ev) {
+            ev.preventDefault();
+            var data = ev.dataTransfer.getData("text");
+            var node = document.getElementById(data).cloneNode(true);
+            node.removeAttribute("id");
+            ev.target.appendChild(node);
+        }
+
+        function getLocation() {
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(function(position) {
+                    document.getElementById("location").innerHTML =
+                        "Latitude: " + position.coords.latitude +
+                        "<br>Longitude: " + position.coords.longitude;
+                });
+            } else {
+                document.getElementById("location").innerHTML = "Geolocation not supported.";
+            }
+        }
+
+        function proceedToPurchase() {
+            alert("Proceeding to purchase...");
+            window.location.href = "purchase.html";
+        }
+    </script>
+
+</body>
+</html>

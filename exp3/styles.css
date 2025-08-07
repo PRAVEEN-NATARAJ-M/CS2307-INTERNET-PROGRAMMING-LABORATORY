@@ -1,0 +1,151 @@
+/* General Page Style */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 20px;
+  background-color: #f8f8f8;
+  color: #333;
+}
+
+/* Headings */
+h2, h3, h4 {
+  color: #2c3e50;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Form Styling */
+form {
+  max-width: 400px;
+  margin: 0 auto;
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"],
+textarea,
+select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 5px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+button {
+  background-color: #2980b9;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0b334e;
+}
+
+
+/* Audio & Video */
+audio,
+video{
+  display: block;
+  margin: 10px auto;
+}
+
+/* Cart Section (ID Selector) */
+#cart {
+  background-color: #ffffff;
+  border: 2px dashed #888;
+  padding: 10px;
+  border-radius: 8px;
+  min-height: 120px;
+}
+
+/* Geolocation Output (ID Selector) */
+#location {
+  color: #555;
+  font-size: 14px;
+  margin-left: 20px;
+}
+
+/* Product Images */
+img[draggable="true"] {
+  margin: 10px;
+  border: 2px solid transparent;
+  border-radius: 5px;
+  cursor: grab;
+  transition: border-color 0.3s ease;
+}
+
+img[draggable="true"]:hover {
+  border-color: #2980b9;
+}
+
+/* Map Image */
+img[usemap] {
+  display: block;
+  margin: 0 auto;
+  border: 3px solid #ddd;
+  border-radius: 8px;
+}
+
+/* ID selector for purchase button */
+button#proceedbutton {
+  background-color: #27ae60;
+}
+
+button#proceedbutton:hover {
+  background-color: #1e8449;
+}
+
+/* Paragraphs and links */
+p, label {
+  font-size: 16px;
+}
+
+a {
+  color: #2980b9;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Center video and image content */
+video{
+  display: block;
+  margin: 10px auto;
+  max-width: 100%;
+}
+
+/* Responsive layout */
+@media screen and (max-width: 600px) {
+  form {
+    width: 90%;
+  }
+
+  video {
+    width: 100%;
+  }
+
+  img[draggable="true"] {
+    width: 80px;
+    height: auto;
+  }
+}
+
+.product-images{
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  height: 200px;
+  border: 3px solid green;
+}
